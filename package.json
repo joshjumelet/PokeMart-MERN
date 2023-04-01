@@ -1,0 +1,18 @@
+{
+  "name": "pokemart-mern",
+  "version": "1.0.0",
+  "description": "Full Stack Repo for a MERN stack e-commerce platform themed as the Poke Mart.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3",
+    "nodemon": "^2.0.22"
+  }
+}
