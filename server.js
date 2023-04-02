@@ -1,6 +1,7 @@
 const express = require('express')
 const userRoute = require('./routes/user')
 const authRoute = require('./routes/auth')
+const productRoute = require('./routes/product')
 const db = require('./db')
 const logger = require('morgan')
 const cors = require('cors')
@@ -17,6 +18,7 @@ app.use(express.json())
 
 app.use('/api/users', userRoute)
 app.use('/api/auth', authRoute)
+app.use('/api/products', productRoute)
 
 app.use(express.static(`${__dirname}/client/build`))
 
