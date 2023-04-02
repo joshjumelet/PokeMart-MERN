@@ -1,11 +1,14 @@
 import './App.css'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import Nav from './components/Nav'
 import Home from './pages/Home'
+import ProductCard from './components/ProductCard'
+import ProductDetails from './pages/ProductDetails'
 
 function App() {
+  let navigate = useNavigate()
   const [products, setProducts] = useState([])
 
   const GetProducts = async () => {
