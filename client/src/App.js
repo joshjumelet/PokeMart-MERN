@@ -2,6 +2,8 @@ import './App.css'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import Nav from './components/Nav'
+import Home from './pages/Home'
 
 function App() {
   const [products, setProducts] = useState([])
@@ -28,6 +30,12 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home products={products} />} />
+          <Route
+            path="products/find/:id"
+            element={
+              <ProductDetails products={products} GetProducts={GetProducts} />
+            }
+          />
         </Routes>
       </main>
     </div>
